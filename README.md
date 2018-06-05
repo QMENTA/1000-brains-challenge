@@ -41,7 +41,7 @@ _WORK IN PROGRESS_
 
 <img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
-### Preparing the Python environment
+## Preparing the Python environment
 
 _NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 3.6**. 
 **Python 2.7** support is not guaranteed._
