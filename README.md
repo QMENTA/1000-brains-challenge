@@ -1,16 +1,21 @@
-# QMENTA 1000 Brains Challenge
+# QMENTA 1000 Brains Challenge 2018
 
+<img src="assets/qmenta_logo.png" alt="QMENTA" style="width: 50%">
 
-<div class="row" style="box-sizing: border-box">
-  <div style="float:left; width=50%; padding=20px">
+----------------
+
+This challenge is presented in the context of the **Hackathon Nacional de Salud 2018** happening the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
+
+<div style="width: 100%; overflow: hidden;">
+  <div style="float: left; width: 45%; padding: 20px">
     <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
   </div>
-  <div style="float:left; width=50%; padding=20px">
-    <img src="assets/qmenta_logo.png"" alt="QMENTA" style="width: 100%">
+  <div style="float: left; width: 45%;">
+    
   </div>
 </div>
 
-### Goal
+## Goal
 
 The 1000 Brains Challenge participants will have to predict the age of healthy individuals based on structural Magnetic Resonance images of their brains.
 
@@ -18,11 +23,11 @@ _Bonus_
 
 Among the healthy subjects there is subset of patients diagnosed with Alzheimer's Disease, but these are not labeled. The bonus goal consists in identifying those subjects with Alzheimer's Disease in the database in an unsupervised manner.
 
-### Evaluation
+## Evaluation
 
 _WORK IN PROGRESS_
 
-### Resources
+## Resources
 
 - **Database**: 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
 
@@ -54,7 +59,7 @@ user@hostname $ conda activate qmenta_1000_brains
 user@hostname $ jupyter lab
 ```
 
-### Contents
+## Contents of the repository
 
 File | Description
 ---- | -------------
