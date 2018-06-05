@@ -1,9 +1,44 @@
 # QMENTA 1000 Brains Challenge
 
-<img src="./assets/hackaton_salud_logo.png" width="400"></img> 
-<br>
-<br>
-<img src="./assets/qmenta_logo.png" width="400"></img>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="row">
+  <div class="column">
+    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="assets/qmenta_logo.png"" alt="QMENTA" style="width:100%">
+  </div>
+</div>
 
 ### Goal
 
@@ -21,15 +56,15 @@ _WORK IN PROGRESS_
 
 - **Database**: 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
 
-![T1-Weighted](/assets/t1_w.jpg)
+<img src="assets/t1_w.jpg" alt="T1-Weighted" class="center">
 
 - **Volumetric and Morphometric analyses**: all the T1-weighted images have been processed with a standard volumetric and morphometric analysis tool available in the QMENTA platform.
 
-![Volumetric and Morphometric analysis](/assets/vol_morph_analysis.png)
+<img src="assets/vol_morph_analysis.png" alt="Volumetric and Morphometric Analysis" class="center">
 
 - **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to get started with the QMENTA Python client, training a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
 
-![Getting started material](/assets/getting_started.png)
+<img src="assets/getting_started.png" alt="Getting started material" class="center">
 
 ### Preparing the Python environment
 
@@ -53,7 +88,7 @@ user@hostname $ jupyter lab
 
 File | Description
 ---- | -------------
-1-qmenta_client_download_data.ipynb | How to download large amounts of data from the QMENTA platform using the QMENTA client. 
-2-train_simple_regression_model.ipynb | Example Scikit-Learn regression model trained on the 1000 brains volumetric data.
-3-package_your_model_with_qmenta_sdk.ipynb | Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image. 
+1.qmenta_client_download_data.ipynb | How to download large amounts of data from the QMENTA platform using the QMENTA client. 
+2.train_simple_regression_model.ipynb | Example Scikit-Learn regression model trained on the 1000 brains volumetric data.
+3.create_tool_qmenta_sdk.ipynb | Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image. 
 Dockerfile | Set of instructions interpreted by the Docker Engine that specify how the Docker image is built.
