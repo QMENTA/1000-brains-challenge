@@ -1,37 +1,12 @@
 # QMENTA 1000 Brains Challenge
 
-<style>
-* {
-    box-sizing: border-box;
-}
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 20px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-</style>
-
-<div class="row">
-  <div class="column">
-    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width:100%">
+<div class="row" style="box-sizing: border-box">
+  <div style="float:left; width=50%; padding=20px">
+    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
   </div>
-  <div class="column">
-    <img src="assets/qmenta_logo.png"" alt="QMENTA" style="width:100%">
+  <div style="float:left; width=50%; padding=20px">
+    <img src="assets/qmenta_logo.png"" alt="QMENTA" style="width: 100%">
   </div>
 </div>
 
@@ -51,15 +26,15 @@ _WORK IN PROGRESS_
 
 - **Database**: 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
 
-<img src="assets/t1_w.jpg" alt="T1-Weighted" class="center">
+<img src="assets/t1_w.jpg" alt="T1-Weighted" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
 - **Volumetric and Morphometric analyses**: all the T1-weighted images have been processed with a standard volumetric and morphometric analysis tool available in the QMENTA platform.
 
-<img src="assets/vol_morph_analysis.png" alt="Volumetric and Morphometric Analysis" class="center">
+<img src="assets/vol_morph_analysis.png" alt="Volumetric and Morphometric Analysis" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
 - **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to get started with the QMENTA Python client, training a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
 
-<img src="assets/getting_started.png" alt="Getting started material" class="center">
+<img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
 ### Preparing the Python environment
 
