@@ -1,4 +1,6 @@
 name: qmenta_1000_brains
+channels: 
+  - conda-forge
 dependencies:
   - python=3.6
   - nomkl
@@ -7,6 +9,7 @@ dependencies:
   - scikit-learn
   - matplotlib
   - pandas
+  - jupyter
+  - jupyterlab
   - pip:
     - qmenta-client
-    - qmenta-sdk-lib
