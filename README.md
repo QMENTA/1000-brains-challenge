@@ -17,15 +17,47 @@ This challenge is presented in the context of the **Hackathon Nacional de Salud 
 
 ## Goal
 
-The 1000 Brains Challenge participants will have to predict the age of healthy individuals based on structural Magnetic Resonance images of their brains.
+The 1000 Brains Challenge participants will have to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
 
 _Bonus_
 
-Among the healthy subjects there is subset of patients diagnosed with Alzheimer's Disease, but these are not labeled. The bonus goal consists in identifying those subjects with Alzheimer's Disease in the database in an unsupervised manner.
+Among the healthy subjects there is a subset of patients diagnosed with Alzheimer's Disease, but these are not labeled. The bonus goal consists in identifying those subjects with Alzheimer's Disease in the database in an unsupervised manner.
 
 ## Evaluation
 
-_WORK IN PROGRESS_
+A team will be considered eligible for evaluation if the following conditions are met:
+
+- A CSV with the predicted ages for the **test** set is produced, named *TeamID_age_predictions.csv*, where *TeamID* is a unique identifier of each team participating in the challenge. It should have the following structure:
+
+SubjectID | Predicted Age
+--------- | -------------
+28751 | 95
+29003 | 12
+(...) | (...)
+33828 | 57
+
+- An SDK tool is produced and deployed to the QMENTA platform, following the guidelines and recommendations shown in this repository.
+
+- The tool is shown to run and finish succesfully in the QMENTA platform, giving a prediction of the age for at least 2 test subjects.
+
+*Bonus objective: Unsupervised AD detection*
+
+If your team has prepared an unsupervised model that identifies the subjects in the database (both in **train** and **test** set), you will have to provide a CSV file in which, for each subject, you indicate with a boolean variable if such subject has AD or not. The structure should be the following:
+
+SubjectID | AD
+--------- | --
+28329 | True
+28330 | False
+28338 | False
+(...) |
+34119 | True
+34123 | False
+
+Among all elligible entries the winner will be chosen according to the following criteria:
+- Technical presentation
+- Methodology
+- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) of the predictions of the test data 
+- (Bonus objective) [F1-score](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) of the AD classification model.
 
 ## Resources
 
