@@ -14,12 +14,13 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Muli" />
 		</noscript>
 	</head>
 	<body id="top">
 		<!-- Header -->
 		<header id="header" class="skel-layers-fixed">
-			<h1><a href="#">TOP</a></h1>
+			<h2><a href="#">TOP</a></h2>
 			<nav id="nav">
 				<ul>
 					<li><a href="#goal">Goal</a></li>
@@ -34,10 +35,21 @@
 
 		<!-- Banner -->
 		<section id="banner">
-			<div class="inner">
-				<h2></h2>
+				<div class="inner">
+					<h2></h2>
+				</div>
+			</section>
+
+		<section id="intro" class="wrapper style1">
+			<header class="major">
+				<h1>QMENTA 1000 Brains Challenge 2018</h1>
+			</header>
+			<div class="container">
+				<p>This challenge is presented in the context of the <b>Hackathon Nacional de Salud 2018</b>happening the <b>15th and 16th June</b> in the <b>Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.</b></p>
+				<center><a class="image fit1"><img src="images/hackaton_salud_logo.png" alt=""/></a></center>
 			</div>
 		</section>
+
 
 		<!-- GOAL -->
 		<section id="goal" class="wrapper style1">
@@ -50,163 +62,164 @@
 				<p>Among the healthy subjects there is a subset of patients diagnosed with Alzheimer's Disease, but these are not labeled. The bonus goal consists in identifying those subjects with Alzheimer's Disease in the database in an unsupervised manner.</p>
 			</div>
 		</section>
-
-		<!-- EVALUATION -->
-		<section id="evaluation" class="wrapper style1">
-			<header class="major">
-				<h2>EVALUATION</h2>
-			</header>
+		
+		<!-- RESOURCES & EVALUATION -->
+		<section id="resources_evaluation" class="wrapper style1">
 			<div class="container">
-				<p>A team will be considered eligible for evaluation if the following conditions are met:</p>
-				<ul>
-					<li>A CSV with the predicted ages for the <b>test</b> set is produced, named TeamID_age_predictions.csv, where TeamID is a unique identifier of each team participating in the challenge. It should have the following structure:
-						<table style="width:100%">
-							<tr>
-								<th>SubjectID</th>
-								<th>Predicted Age</th> 
-							</tr>
-							<tr>
-								<td>28751</td>
-								<td>95</td> 
-							</tr>
-							<tr>
-								<td>29003</td>
-								<td>12</td> 
-							</tr>
-							<tr>
-								<td>(...)</td>
-								<td>(...)</td> 
-							</tr>
-							<tr>
-								<td>33828</td>
-								<td>57</td> 
-							</tr>
-						</table>
-					</li>
-					<li>An SDK tool is produced and deployed to the QMENTA platform, following the guidelines and recommendations shown in this repository.</li>
-					<li>The tool is shown to run and finish succesfully in the QMENTA platform, giving a prediction of the age for at least 2 test subjects.</li>
-				</ul>
-				<p><i>Bonus objective: Unsupervised AD detection</i></p>
-				<p>If your team has prepared an unsupervised model that identifies the subjects in the database (both in <b>train</b> and <b>test</b> set), you will have to provide a CSV file in which, for each subject, you indicate with a boolean variable if such subject has AD or not.</p> 
-				<p>The structure should be the following:</p>
-				<table style="width:100%">
-					<tr>
-						<th>SubjectID</th>
-						<th>AD</th> 
-					</tr>
-					<tr>
-						<td>28329</td>
-						<td>True</td> 
-					</tr>
-					<tr>
-						<td>28330</td>
-						<td>False</td> 
-					</tr>
-					<tr>
-						<td>28338</td>
-						<td>False</td> 
-						</tr>
-					<tr>
-						<td>(...)</td>
-						<td>(...)</td> 
-					</tr>
-					<tr>
-						<td>34119</td>
-						<td>True</td> 
-					</tr>
-					<tr>
-						<td>34123</td>
-						<td>False</td> 
-					</tr>
-				</table>
-				<p>Among all elligible entries the winner will be chosen according to the following criteria:</p>
-				<ul>
-					<li>Technical presentation</li>
-					<li>Methodology</li>
-					<li><a href="http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error">Mean Squared Error</a> of the predictions of the test data</li>
-					<li>(Bonus objective) <a href="http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics">F1-Score</a> of the AD classification model.</li>
-				</ul>	
+				<div class="row">
+					<div class="7u">
+						<header class="major">
+							<h2>RESOURCES</h2>
+						</header>
+						<p><ul>
+							<li><b>Database:</b> 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
+								<center><a class="image fit2"><img src="images/t1_w.jpg" alt=""/></a></center>
+							</li>
+							<li><b>Volumetric and Morphometric analyses: </b>all the T1-weighted images have been processed with a standard volumetric and morphometric analysis tool available in the QMENTA platform.
+								<center><a class="image fit"><img src="images/vol_morph_analysis.png" alt="" /></a></center>
+							</li>
+							<li><b>Getting started material:</b>this GitHub repository contains introductory Jupyter notebooks to get started with the QMENTA Python client, training a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
+								<center><a class="image fit"><img src="images/getting_started.png" alt="" /></a></center>
+							</li>
+							</ul>
+						</p>
+					</div>
+					<div class="5u">
+						<header class="major">
+							<h2>EVALUATION</h2>
+						</header>
+						<p>A team will be considered eligible for evaluation if the following conditions are met:</p>
+						<ul>
+							<li>A CSV with the predicted ages for the <b>test</b> set is produced, named TeamID_age_predictions.csv, where TeamID is a unique identifier of each team participating in the challenge. It should have the following structure:
+								<table style="width:100%">
+									<tr>
+										<th>SubjectID</th>
+										<th>Predicted Age</th> 
+									</tr>
+									<tr>
+										<td>28751</td>
+										<td>95</td> 
+									</tr>
+									<tr>
+										<td>29003</td>
+										<td>12</td> 
+									</tr>
+									<tr>
+										<td>(...)</td>
+										<td>(...)</td> 
+									</tr>
+									<tr>
+										<td>33828</td>
+										<td>57</td> 
+									</tr>
+								</table>
+							</li>
+							<li>An SDK tool is produced and deployed to the QMENTA platform, following the guidelines and recommendations shown in this repository.</li>
+							<li>The tool is shown to run and finish succesfully in the QMENTA platform, giving a prediction of the age for at least 2 test subjects.</li>
+						</ul>
+						<p><i>Bonus objective: Unsupervised AD detection</i></p>
+						<p>If your team has prepared an unsupervised model that identifies the subjects in the database (both in <b>train</b> and <b>test</b> set), you will have to provide a CSV file in which, for each subject, you indicate with a boolean variable if such subject has AD or not.</p> 
+						<p>The structure should be the following:</p>
+							<table style="width:100%">
+								<tr>
+									<th>SubjectID</th>
+									<th>AD</th> 
+								</tr>
+								<tr>
+									<td>28329</td>
+									<td>True</td> 
+								</tr>
+								<tr>
+									<td>28330</td>
+									<td>False</td> 
+								</tr>
+								<tr>
+									<td>28338</td>
+									<td>False</td> 
+									</tr>
+								<tr>
+									<td>(...)</td>
+									<td>(...)</td> 
+								</tr>
+								<tr>
+									<td>34119</td>
+									<td>True</td> 
+								</tr>
+								<tr>
+									<td>34123</td>
+									<td>False</td> 
+								</tr>
+							</table>
+						<p>Among all elligible entries the winner will be chosen according to the following criteria:</p>
+							<ul>
+								<li>Technical presentation</li>
+								<li>Methodology</li>
+								<li><a href="http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error">Mean Squared Error</a> of the predictions of the test data</li>
+								<li>(Bonus objective) <a href="http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics">F1-Score</a> of the AD classification model.</li>
+							</ul>	
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		
+		<!-- PREPARING THE PYTHON ENVIRONMENT & CONTENTS OF THE REPOSITORY -->
+		<section id="environment_repository" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="7u">
+							<header class="major">
+								<h2>PREPARING THE PYTHON ENVIRONMENT</h2>
+							</header>
+							<p><i>NOTE: The Jupyter notebooks in this repository have been written and tested with <b>Python 3.6. Python 2.7</b> support is not guaranteed.</i></p>
+							<p>At QMENTA we extensively use Conda for managing Python packages and environments. It is specially useful because it allows having different environments with different Python versions without needing to change to another environment management system.</p>
+							<p>After <a href="https://conda.io/docs/user-guide/install/index.html">installing Miniconda for your platform</a> (Windows, macOS or Linux), you can create a replica of the environment used to create these notebooks by executing the following commands:</p>
+							<p>
+								<pre>
+									<code>user@hostname $ conda create env -f environment.yml</code>
+								</pre>
+							</p>
+							<p>When the environment creation process finishes you can activate your environment in order to run Jupyter Lab and inspect the provided code:</p>
+							<p>
+								<pre>
+									<code>
+										user@hostname $ conda activate qmenta_1000_brains
+										user@hostname $ jupyter lab
+									</code>
+								</pre>
+							</p>	
+						</div>
+						<div class="5u">
+							<header class="major">
+								<h2>CONTENTS OF THE REPOSITORY</h2>
+							</header>
+							<p>
+								<table style="width:100%">
+									<tr>
+										<th>File</th>
+										<th>Description</th> 
+									</tr>
+									<tr>
+										<td>1.qmenta_client_download_data.ipynb</td>
+										<td>How to download large amounts of data from the QMENTA platform using the QMENTA client.</td> 
+									</tr>
+									<tr>
+										<td>2.train_simple_regression_model.ipynb</td>
+										<td>Example Scikit-Learn regression model trained on the 1000 brains volumetric data.</td> 
+									</tr>
+									<tr>
+										<td>3.create_tool_qmenta_sdk.ipynb</td>
+										<td>Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image.</td> 
+									</tr>
+									<tr>
+										<td>Dockerfile</td>
+										<td>Set of instructions interpreted by the Docker Engine that specify how the Docker image is built.</td> 
+									</tr>
+								</table>	
+							</p>
+					</div>
+				</div>
 			</div>
 		</section>
-		
-		<!-- RESOURCES -->
-		<section id="resources" class="wrapper style1">
-			<header class="major">
-				<h2>RESOURCES</h2>
-			</header>
-			<div class="container">
-				<p><ul>
-						<li><b>Database:</b> 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
-							<a class="image fit"><img src="images/t1_w.jpg" alt="" /></a>
-						</li>
-						<li><b>Volumetric and Morphometric analyses: </b>all the T1-weighted images have been processed with a standard volumetric and morphometric analysis tool available in the QMENTA platform.
-							<a class="image fit"><img src="images/vol_morph_analysis.png" alt="" /></a>
-						</li>
-						<li><b>Getting started material:</b>this GitHub repository contains introductory Jupyter notebooks to get started with the QMENTA Python client, training a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
-							<a class="image fit"><img src="images/getting_started.png" alt="" /></a>
-						</li>
-					</ul>
-				</p>
-			</div>
-		</section>	
-
-		<!-- Preparing the Python environment -->
-		<section id="environment" class="wrapper style1">
-			<header class="major">
-				<h2>PREPARING THE PYTHON ENVIRONMENT</h2>
-			</header>
-			<div class="container">
-				<p><i>NOTE: The Jupyter notebooks in this repository have been written and tested with <b>Python 3.6. Python 2.7</b> support is not guaranteed.</i></p>
-				<p>At QMENTA we extensively use Conda for managing Python packages and environments. It is specially useful because it allows having different environments with different Python versions without needing to change to another environment management system.</p>
-				<p>After <a href="https://conda.io/docs/user-guide/install/index.html">installing Miniconda for your platform</a> (Windows, macOS or Linux), you can create a replica of the environment used to create these notebooks by executing the following commands:</p>
-				<p>
-					<pre>
-						<code>user@hostname $ conda create env -f environment.yml</code>
-					</pre>
-				</p>
-				<p>When the environment creation process finishes you can activate your environment in order to run Jupyter Lab and inspect the provided code:</p>
-				<p>
-					<pre>
-						<code>
-							user@hostname $ conda activate qmenta_1000_brains
-							user@hostname $ jupyter lab
-						</code>
-					</pre>
-				</p>
-			</div>
-		</section>	
-
-		<!-- Contents of the repository -->
-		<section id="contents_repository" class="wrapper style1">
-			<header class="major">
-				<h2>CONTENTS OF THE REPOSITORY</h2>
-			</header>
-			<div class="container">
-				<p>
-					<table style="width:100%">
-						<tr>
-							<th>File</th>
-							<th>Description</th> 
-						</tr>
-						<tr>
-							<td>1.qmenta_client_download_data.ipynb</td>
-							<td>How to download large amounts of data from the QMENTA platform using the QMENTA client.</td> 
-						</tr>
-						<tr>
-							<td>2.train_simple_regression_model.ipynb</td>
-							<td>Example Scikit-Learn regression model trained on the 1000 brains volumetric data.</td> 
-						</tr>
-						<tr>
-							<td>3.create_tool_qmenta_sdk.ipynb</td>
-							<td>Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image.</td> 
-						</tr>
-						<tr>
-							<td>Dockerfile</td>
-							<td>Set of instructions interpreted by the Docker Engine that specify how the Docker image is built.</td> 
-						</tr>
-					</table>	
-				</p>
-			</div>
-		</section>	
 	</body>
 </html>
