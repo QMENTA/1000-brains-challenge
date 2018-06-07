@@ -163,6 +163,7 @@
 		font-size: 1.25em;
 		margin-top: -1em;
 		line-height: 1.25em;
+		font-weight: bold;
 	}
 
 	header h3 + p {
@@ -643,6 +644,7 @@
 			font-weight: 500;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
+			font-weight: bold;
 		}
 
 		table thead {
