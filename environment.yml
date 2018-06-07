@@ -11,5 +11,6 @@ dependencies:
   - pandas
   - jupyter
   - jupyterlab
+  - tqdm
   - pip:
     - qmenta-client
