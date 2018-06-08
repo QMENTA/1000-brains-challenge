@@ -1,0 +1,16 @@
+[
+	{
+		"type": "info",
+		"content": "Required inputs:<br><b>&bull; ANTs</b>: previously computed ANTs morphology analysis.<br>&ensp"
+	},
+
+	{
+		"type": "container",
+		"id": "input_ants",
+		"title": "ANTs Morphology analysis",
+		"file_filter": "c_volumetric[1,1]<'', [], 'volumetric\\.csv'>",
+		"in_filter":[],
+		"out_filter":["qmenta_ants_morphology_2"],
+		"mandatory": 1
+    }
+]

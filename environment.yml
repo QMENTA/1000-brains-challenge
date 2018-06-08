@@ -12,5 +12,8 @@ dependencies:
   - jupyter
   - jupyterlab
   - tqdm
+  - pylint
   - pip:
+    - --extra-index-url https://testpypi.python.org/pypi
     - qmenta-client
+    - qmenta-sdk-lib
