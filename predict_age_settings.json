@@ -11,6 +11,7 @@
 		"file_filter": "c_volumetric[1,1]<'', [], 'volumetric\\.csv'>",
 		"in_filter":[],
 		"out_filter":["qmenta_ants_morphology_2"],
-		"mandatory": 1
+		"mandatory": 1,
+		"anchor": 1
     }
 ]
