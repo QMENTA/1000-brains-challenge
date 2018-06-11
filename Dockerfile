@@ -22,8 +22,12 @@ COPY predict_age.py /root/src/predict_age.py
 ENV PYTHONPATH="/root/src/:${PYTHONPATH}"
 
 # Package the persisted model
-RUN mkdir -p /root/models
-COPY linear_regression_example.pkl /root/models/linear_regression_example.pkl
+RUN mkdir -p /root/qmenta_cnic_1000_brains_challenge/models
+COPY linear_regression_example.pkl /root/qmenta_cnic_1000_brains_challenge/models/linear_regression_example.pkl
 
 # Create entrypoint
-RUN printf "exec /opt/miniconda/envs/qmenta_1000_brains/python -m qmenta.sdk.executor \$@"
+RUN printf "#!/bin/bash\n" >> /root/entrypoint.sh
+RUN printf "\n# Start command\nexec /opt/miniconda/envs/qmenta_1000_brains/bin/python -m qmenta.sdk.executor \$@\n" >> /root/entrypoint.sh
+RUN chmod u+x /root/entrypoint.sh
+
+WORKDIR "/root"
