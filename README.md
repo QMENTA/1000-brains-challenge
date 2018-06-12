@@ -99,3 +99,6 @@ File | Description
 2.train_simple_regression_model.ipynb | Example Scikit-Learn regression model trained on the 1000 brains volumetric data.
 3.create_tool_qmenta_sdk.ipynb | Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image. 
 Dockerfile | Set of instructions interpreted by the Docker Engine that specify how the Docker image is built.
+environment.yml | Conda environment file
+predict_age.py | Python script that implements the age prediction tool using the QMENTA SDK
+predict_age_settings.json | Settings specification in JSON format that has to be introduced when registering the tool in the QMENTA platform
