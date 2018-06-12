@@ -75,8 +75,8 @@ Among all elligible entries the winner will be chosen according to the following
 
 ## Preparing the Python environment
 
-_NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 3.6**. 
-**Python 2.7** support is not guaranteed._
+_NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**. 
+Our libraries will soon support the latest versions of Python, however their compatibility is not guaranteed as of now._
 
 At QMENTA we extensively use Conda for managing Python packages and environments. It is specially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
 

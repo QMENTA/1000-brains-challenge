@@ -2,7 +2,8 @@ name: qmenta_1000_brains
 channels: 
   - conda-forge
 dependencies:
-  - python=3.6
+  - python=2.7
+  - pip=10.0.1
   - nomkl
   - numpy
   - scipy
@@ -15,5 +16,5 @@ dependencies:
   - pylint
   - pip:
     - --extra-index-url https://testpypi.python.org/pypi
-    - qmenta-client
     - qmenta-sdk-lib
+    - qmenta-client
