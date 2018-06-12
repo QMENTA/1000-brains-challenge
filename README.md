@@ -17,7 +17,7 @@ This challenge is presented in the context of the **Hackathon Nacional de Salud 
 
 ## Goal
 
-The 1000 Brains Challenge participants will have to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
+In the 1000 Brains Challenge, participants will have to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
 
 _Bonus_
 
