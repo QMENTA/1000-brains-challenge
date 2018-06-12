@@ -82,13 +82,13 @@ At QMENTA we extensively use Conda for managing Python packages and environments
 
 After [installing Miniconda for your platform](https://conda.io/docs/user-guide/install/index.html) (Windows, macOS or Linux), you can create a replica of the environment used to create these notebooks by executing the following commands:
 ```s
-user@hostname $ conda create env -f environment.yml
+conda create env -f environment.yml
 ```
 
 When the environment creation process finishes you can activate your environment in order to run Jupyter Lab and inspect the provided code:
 ```s
-user@hostname $ conda activate qmenta_1000_brains
-user@hostname $ jupyter lab
+conda activate qmenta_1000_brains
+jupyter lab
 ```
 
 ## Contents of the repository
