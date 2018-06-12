@@ -72,11 +72,12 @@ def run(context):
     # Run inference with the loaded model over the predictor data x
     prediction = linear_regression_model.predict(x)
     predicted_age = prediction[0]
+    logger.info('Predicted age: {}'.format(predicted_age))
 
     context.set_progress('Inference', value=90)
 
     # Write the predicted age in a text file and upload it to the platform
     result_file = os.path.join(output_data_dir, 'age.txt')
     with open(result_file, 'w') as fd:
-        fd.write(predicted_age + '\n')
+        fd.write('{}\n'.format(predicted_age))
     context.upload_file(result_file, 'age.txt', tags={'prediction'})
