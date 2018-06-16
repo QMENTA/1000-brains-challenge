@@ -42,7 +42,7 @@ SubjectID | Predicted Age
 
 *Bonus objective: Unsupervised AD detection*
 
-If your team has prepared an unsupervised model that identifies the subjects in the database (both in **train** and **test** set), you will have to provide a CSV file in which, for each subject, you indicate with a boolean variable if such subject has AD or not. The structure should be the following:
+If your team has prepared an unsupervised model that identifies the subjects in the database (both in **train** and **test** set), you will have to provide a CSV file, named *TeamID_ad_predictions.csv*,  in which for each subject you indicate with a boolean variable if such subject has AD or not. The structure should be the following:
 
 SubjectID | AD
 --------- | --
@@ -53,11 +53,24 @@ SubjectID | AD
 34119 | True
 34123 | False
 
-Among all elligible entries the winner will be chosen according to the following criteria:
-- Technical presentation
-- Methodology
-- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) of the predictions of the test data 
-- (Bonus objective) [F1-score](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) of the AD classification model.
+Submissions will be scored according to the following criteria:
+- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) of the predictions of the test data : 
+  - Lowest value: **3 points**
+  - 2nd lowest value: **2 points**
+  - 3rd lowest value: **1 point**
+
+- [F1-score](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) of the AD classification model:
+  - Highest value: **3 points**
+  - 2nd highest value: **2 points**
+  - 3rd highest value: **1 point**
+
+- Model with most interpretability and explanatory power: **2 points**
+
+- Most innovative and original model: **1 point**
+
+- Best methodological approach: **1 point**
+
+In the event of a tie, the winner will be chosen subjectively based on the 5 minute pitch.
 
 ## Resources
 
