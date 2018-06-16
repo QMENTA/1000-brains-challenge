@@ -54,10 +54,12 @@ SubjectID | AD
 34123 | False
 
 Submissions will be scored according to the following criteria:
-- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) of the predictions of the test data : 
+- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) (MSE) of the predictions of the test data : 
   - Lowest value: **3 points**
   - 2nd lowest value: **2 points**
   - 3rd lowest value: **1 point**
+
+_NOTE:The baseline MSE score obtained with the Linear Regression example demonstrated in this repository is **144.088**_
 
 - [F1-score](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) of the AD classification model:
   - Highest value: **3 points**
