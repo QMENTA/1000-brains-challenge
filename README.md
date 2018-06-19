@@ -88,6 +88,8 @@ In the event of a tie, the winner will be chosen subjectively based on the 5 min
 
 <img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
+- **Ground-truth age and AD labels**: once the challenge is over the ground-truth age of the subjects in the test set, as well as the ground-truth labels of the Alzheimer's disease subjects in the train and test set will be made public in the `test` folder.
+
 ## Preparing the Python environment
 
 _NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**. 
@@ -117,3 +119,5 @@ Dockerfile | Set of instructions interpreted by the Docker Engine that specify h
 environment.yml | Conda environment file
 predict_age.py | Python script that implements the age prediction tool using the QMENTA SDK
 predict_age_settings.json | Settings specification in JSON format that has to be introduced when registering the tool in the QMENTA platform
+test/age.csv | Ages of the subjects in the test set
+test/ad_subjects.csv | Boolean list indicating which are the subjects with Alzheimer's disease in the whole database 
