@@ -20,10 +20,10 @@ If you are interested in participating, please contact [info@qmenta.com](mailto:
 This challenge was presented for the first time in the context of the **Hackathon Nacional de Salud 2018**, the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
 
 <div style="width: 100%; overflow: hidden;">
-  <div style="float: left; width: 35%; padding: 20px">
+  <div style="float: left; width: 15%; padding: 20px">
     <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
   </div>
-  <div style="float: left; width: 35%;">
+  <div style="float: left; width: 15%;">
     
   </div>
 </div>
