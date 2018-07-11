@@ -21,7 +21,7 @@ This challenge was presented for the first time in the context of the **Hackatho
 
 <div style="width: 100%; overflow: hidden;">
   <div style="float: left; width: 15%; padding: 20px">
-    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
+    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 50%">
   </div>
   <div style="float: left; width: 15%;">
     
