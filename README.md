@@ -4,13 +4,26 @@
 
 ----------------
 
-This challenge is presented in the context of the **Hackathon Nacional de Salud 2018** happening the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
+We re-open the QMENTA 1000 Brains Challenge 2018 for the **[VISUM Summer School 2018](http://visum.inesctec.pt/)**, which takes place in Porto from 5th July to 13th July. 
+
+If you are interested in participating, please contact [info@qmenta.com](mailto:info@qmenta.com?Subject=QMENTA%201000%20Brains%20Challenge%20VISUM%202018).
 
 <div style="width: 100%; overflow: hidden;">
   <div style="float: left; width: 45%; padding: 20px">
-    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
+    <img src="assets/visum2018.png" alt="Hackaton Salud" style="width: 100%">
   </div>
   <div style="float: left; width: 45%;">
+    
+  </div>
+</div>
+
+This challenge was presented for the first time in the context of the **Hackathon Nacional de Salud 2018**, the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
+
+<div style="width: 100%; overflow: hidden;">
+  <div style="float: left; width: 35%; padding: 20px">
+    <img src="assets/hackaton_salud_logo.png" alt="Hackaton Salud" style="width: 100%">
+  </div>
+  <div style="float: left; width: 35%;">
     
   </div>
 </div>
@@ -19,15 +32,11 @@ This challenge is presented in the context of the **Hackathon Nacional de Salud 
 
 In the 1000 Brains Challenge, participants will have to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
 
-_Bonus_
-
-Among the healthy subjects there is a subset of patients diagnosed with Alzheimer's Disease, but these are not labeled. The bonus goal consists in identifying those subjects with Alzheimer's Disease in the database in an unsupervised manner.
-
 ## Evaluation
 
-A team will be considered eligible for evaluation if the following conditions are met:
+A submission will be considered eligible for evaluation if the following conditions are met:
 
-- A CSV with the predicted ages for the **test** set is produced, named *TeamID_age_predictions.csv*, where *TeamID* is a unique identifier of each team participating in the challenge. It should have the following structure:
+- A CSV with the predicted ages for the **test** set is produced, named *SubmissionID_age_predictions.csv*, where *SubmissionID* is a unique identifier of your submission. For example, the *SubmissionID* can be your full name if you submit your work by yourself, or the name of the institution you are working in. The produced CSV should have the following structure:
 
 SubjectID | Predicted Age
 --------- | -------------
@@ -40,39 +49,10 @@ SubjectID | Predicted Age
 
 - The tool is shown to run and finish succesfully in the QMENTA platform, giving a prediction of the age for at least 2 test subjects.
 
-*Bonus objective: Unsupervised AD detection*
 
-If your team has prepared an unsupervised model that identifies the subjects in the database (both in **train** and **test** set), you will have to provide a CSV file, named *TeamID_ad_predictions.csv*,  in which for each subject you indicate with a boolean variable if such subject has AD or not. The structure should be the following:
+Submissions will be scored according to the [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) (MSE) of the predictions of the test data.
 
-SubjectID | AD
---------- | --
-28329 | True
-28330 | False
-28338 | False
-(...) |
-34119 | True
-34123 | False
-
-Submissions will be scored according to the following criteria:
-- [Mean Squared Error](http://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) (MSE) of the predictions of the test data : 
-  - Lowest value: **3 points**
-  - 2nd lowest value: **2 points**
-  - 3rd lowest value: **1 point**
-
-_NOTE:The baseline MSE score obtained with the Linear Regression example demonstrated in this repository is **144.088**_
-
-- [F1-score](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) of the AD classification model:
-  - Highest value: **3 points**
-  - 2nd highest value: **2 points**
-  - 3rd highest value: **1 point**
-
-- Model with most interpretability and explanatory power: **2 points**
-
-- Most innovative and original model: **1 point**
-
-- Best methodological approach: **1 point**
-
-In the event of a tie, the winner will be chosen subjectively based on the 5 minute pitch.
+_NOTE: The baseline MSE score obtained with the Linear Regression example demonstrated in this repository is **144.088**_.
 
 ## Resources
 
@@ -88,12 +68,11 @@ In the event of a tie, the winner will be chosen subjectively based on the 5 min
 
 <img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
-- **Ground-truth age and AD labels**: once the challenge is over the ground-truth age of the subjects in the test set, as well as the ground-truth labels of the Alzheimer's disease subjects in the train and test set will be made public in the `test` folder.
 
 ## Preparing the Python environment
 
 _NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**. 
-Our libraries will soon support the latest versions of Python, however their compatibility is not guaranteed as of now._
+Our libraries will soon support the latest versions of Python, however their compatibility is **not guaranteed** as of now._
 
 At QMENTA we extensively use Conda for managing Python packages and environments. It is especially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
 
@@ -119,5 +98,3 @@ Dockerfile | Set of instructions interpreted by the Docker Engine that specify h
 environment.yml | Conda environment file
 predict_age.py | Python script that implements the age prediction tool using the QMENTA SDK
 predict_age_settings.json | Settings specification in JSON format that has to be introduced when registering the tool in the QMENTA platform
-test/age.csv | Ages of the subjects in the test set
-test/ad_subjects.csv | Boolean list indicating which are the subjects with Alzheimer's disease in the whole database 
