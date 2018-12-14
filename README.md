@@ -4,20 +4,15 @@
 
 ----------------
 
-We re-open the QMENTA 1000 Brains Challenge 2018 for the **[VISUM Summer School 2018](http://visum.inesctec.pt/)**, which takes place in Porto from 5th July to 13th July. 
+## Goal
 
-If you are interested in participating, please contact [info@qmenta.com](mailto:info@qmenta.com?Subject=QMENTA%201000%20Brains%20Challenge%20VISUM%202018).
+In the 1000 Brains Challenge, participants are asked to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
 
-<div style="width: 100%; overflow: hidden;">
-  <div style="float: left; width: 45%; padding: 20px">
-    <img src="assets/visum2018.png" alt="Hackaton Salud" style="width: 100%">
-  </div>
-  <div style="float: left; width: 45%;">
-    
-  </div>
-</div>
+## Participation
 
-This challenge was presented for the first time in the context of the **Hackathon Nacional de Salud 2018**, the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
+#### NOTE: This challenge is no longer open
+
+The 1000 Brains Challenge was presented for the first time in the context of the **Hackathon Nacional de Salud 2018**, the **15th and 16th June** in the **Centro Nacional de Investigaciones Cardiovasculares (CNIC), Madrid.** 
 
 <div style="width: 100%; overflow: hidden;">
   <div style="float: left; width: 15%; padding: 20px">
@@ -28,13 +23,20 @@ This challenge was presented for the first time in the context of the **Hackatho
   </div>
 </div>
 
-## Goal
+It was later re-opened for the **[VISUM Summer School 2018](http://visum.inesctec.pt/)**, which took place in Porto from 5th July to 13th July. 
 
-In the 1000 Brains Challenge, participants will have to **predict the age** of healthy individuals based on **structural Magnetic Resonance images** of their **brains**.
+<div style="width: 100%; overflow: hidden;">
+  <div style="float: left; width: 45%; padding: 20px">
+    <img src="assets/visum2018.png" alt="Hackaton Salud" style="width: 100%">
+  </div>
+  <div style="float: left; width: 45%;">
+    
+  </div>
+</div>
 
 ## Evaluation
 
-A submission will be considered eligible for evaluation if the following conditions are met:
+A submission is considered eligible for evaluation if the following conditions are met:
 
 - A CSV with the predicted ages for the **test** set is produced, named *SubmissionID_age_predictions.csv*, where *SubmissionID* is a unique identifier of your submission. For example, the *SubmissionID* can be your full name if you submit your work by yourself, or the name of the institution you are working in. The produced CSV should have the following structure:
 
@@ -56,7 +58,7 @@ _NOTE: The baseline MSE score obtained with the Linear Regression example demons
 
 ## Resources
 
-- **Database**: 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years.
+- **Database**: 1000 healthy individuals with T1-weighted Magnetic Resonance images and their associated age in years. Be aware that this database is currently available for personal research only. It is strictly prohibited to sell, redistribute or use the data for commercial purposes.
 
 <img src="assets/t1_w.jpg" alt="T1-Weighted" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
@@ -64,7 +66,7 @@ _NOTE: The baseline MSE score obtained with the Linear Regression example demons
 
 <img src="assets/vol_morph_analysis.png" alt="Volumetric and Morphometric Analysis" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
-- **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to get started with the QMENTA Python client, training a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
+- **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to train a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
 
 <img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
@@ -72,7 +74,6 @@ _NOTE: The baseline MSE score obtained with the Linear Regression example demons
 ## Preparing the Python environment
 
 _NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**. 
-Our libraries will soon support the latest versions of Python, however their compatibility is **not guaranteed** as of now._
 
 At QMENTA we extensively use Conda for managing Python packages and environments. It is especially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
 
@@ -91,9 +92,8 @@ jupyter lab
 
 File | Description
 ---- | -------------
-1.qmenta_client_download_data.ipynb | How to download large amounts of data from the QMENTA platform using the QMENTA client. 
-2.train_simple_regression_model.ipynb | Example Scikit-Learn regression model trained on the 1000 brains volumetric data.
-3.create_tool_qmenta_sdk.ipynb | Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image. 
+train_simple_regression_model.ipynb | Example Scikit-Learn regression model trained on the 1000 brains volumetric data.
+create_tool_qmenta_sdk.ipynb | Create a model artifact to use for inference, create a tool with the QMENTA SDK and package it in a Docker container image. 
 Dockerfile | Set of instructions interpreted by the Docker Engine that specify how the Docker image is built.
 environment.yml | Conda environment file
 predict_age.py | Python script that implements the age prediction tool using the QMENTA SDK
