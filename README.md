@@ -75,7 +75,7 @@ _NOTE: The baseline MSE score obtained with the Linear Regression example demons
 
 _NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**._
 
-At QMENTA we extensively use Conda for managing Python packages and environments. It is especially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
+At QMENTA we use Conda extensively for managing Python packages and environments. It is especially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
 
 After [installing Miniconda for your platform](https://conda.io/docs/user-guide/install/index.html) (Windows, macOS or Linux), you can create a replica of the environment used to create these notebooks by executing the following commands:
 ```s
