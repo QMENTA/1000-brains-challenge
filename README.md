@@ -66,14 +66,14 @@ _NOTE: The baseline MSE score obtained with the Linear Regression example demons
 
 <img src="assets/vol_morph_analysis.png" alt="Volumetric and Morphometric Analysis" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
-- **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to train a simple regression model and packaging your predictive model in a Docker image with the QMENTA SDK.
+- **Getting started material**: this GitHub repository contains introductory Jupyter notebooks to train a simple regression model and package your predictive model in a Docker image with the QMENTA SDK.
 
 <img src="assets/getting_started.png" alt="Getting started material" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
 
 
 ## Preparing the Python environment
 
-_NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**. 
+_NOTE_: _The Jupyter notebooks in this repository have been written and tested with **Python 2.7**._
 
 At QMENTA we extensively use Conda for managing Python packages and environments. It is especially useful because it allows having different environments with different Python versions without needing to change to another environment management system. 
 
